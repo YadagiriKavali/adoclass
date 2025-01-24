@@ -1,0 +1,10 @@
+D:\Yadagiri\Core\DataSetDemoApp\DataSetDemoApp\bin\Debug\DataSetDemoApp.exe.config
+D:\Yadagiri\Core\DataSetDemoApp\DataSetDemoApp\bin\Debug\DataSetDemoApp.exe
+D:\Yadagiri\Core\DataSetDemoApp\DataSetDemoApp\bin\Debug\DataSetDemoApp.pdb
+D:\Yadagiri\Core\DataSetDemoApp\DataSetDemoApp\obj\Debug\DataSetDemoApp.csprojAssemblyReference.cache
+D:\Yadagiri\Core\DataSetDemoApp\DataSetDemoApp\obj\Debug\DataSetDemoApp.Form1.resources
+D:\Yadagiri\Core\DataSetDemoApp\DataSetDemoApp\obj\Debug\DataSetDemoApp.Properties.Resources.resources
+D:\Yadagiri\Core\DataSetDemoApp\DataSetDemoApp\obj\Debug\DataSetDemoApp.csproj.GenerateResource.cache
+D:\Yadagiri\Core\DataSetDemoApp\DataSetDemoApp\obj\Debug\DataSetDemoApp.csproj.CoreCompileInputs.cache
+D:\Yadagiri\Core\DataSetDemoApp\DataSetDemoApp\obj\Debug\DataSetDemoApp.exe
+D:\Yadagiri\Core\DataSetDemoApp\DataSetDemoApp\obj\Debug\DataSetDemoApp.pdb

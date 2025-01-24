@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="~/images/banner1.svg" alt="ASP.NET" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    Learn how to build ASP.NET apps that can run anywhere.
+                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525028&clcid=0x409">
+                        Learn More
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <form action="/" method="post">
+        Name:<input type="text" name="cookiename" value="" /><br />
+        value:<input type="text" name="cookievalue" value="" /> <br />
+        path:<input type="text" name="cookiepath" value="" /> <br />
+        <input type="submit" name="submit" value="Add" formaction="/Home/AddCookie" /> <br />
+        <input type="submit" name="submit" value="Get" formaction="/Home/GetCookie" /><br />
+        <input type="submit" name="submit" value="GetALL" formaction="/Home/GetAllCookie" /><br />
+        <input type="submit" name="submit" value="Delete" formaction="/Home/DeleteCookie" /><br />
+    </form>
+    <hr />
+    value=@ViewBag.Cookievalue

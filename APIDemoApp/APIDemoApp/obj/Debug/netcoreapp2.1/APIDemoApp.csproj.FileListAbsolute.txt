@@ -1,0 +1,14 @@
+D:\Yadagiri\Core\APIDemoApp\APIDemoApp\bin\Debug\netcoreapp2.1\APIDemoApp.deps.json
+D:\Yadagiri\Core\APIDemoApp\APIDemoApp\bin\Debug\netcoreapp2.1\APIDemoApp.runtimeconfig.json
+D:\Yadagiri\Core\APIDemoApp\APIDemoApp\bin\Debug\netcoreapp2.1\APIDemoApp.runtimeconfig.dev.json
+D:\Yadagiri\Core\APIDemoApp\APIDemoApp\bin\Debug\netcoreapp2.1\APIDemoApp.dll
+D:\Yadagiri\Core\APIDemoApp\APIDemoApp\bin\Debug\netcoreapp2.1\APIDemoApp.pdb
+D:\Yadagiri\Core\APIDemoApp\APIDemoApp\obj\Debug\netcoreapp2.1\APIDemoApp.csprojAssemblyReference.cache
+D:\Yadagiri\Core\APIDemoApp\APIDemoApp\obj\Debug\netcoreapp2.1\APIDemoApp.csproj.CoreCompileInputs.cache
+D:\Yadagiri\Core\APIDemoApp\APIDemoApp\obj\Debug\netcoreapp2.1\APIDemoApp.RazorAssemblyInfo.cache
+D:\Yadagiri\Core\APIDemoApp\APIDemoApp\obj\Debug\netcoreapp2.1\APIDemoApp.RazorAssemblyInfo.cs
+D:\Yadagiri\Core\APIDemoApp\APIDemoApp\obj\Debug\netcoreapp2.1\APIDemoApp.AssemblyInfoInputs.cache
+D:\Yadagiri\Core\APIDemoApp\APIDemoApp\obj\Debug\netcoreapp2.1\APIDemoApp.AssemblyInfo.cs
+D:\Yadagiri\Core\APIDemoApp\APIDemoApp\obj\Debug\netcoreapp2.1\APIDemoApp.RazorTargetAssemblyInfo.cache
+D:\Yadagiri\Core\APIDemoApp\APIDemoApp\obj\Debug\netcoreapp2.1\APIDemoApp.dll
+D:\Yadagiri\Core\APIDemoApp\APIDemoApp\obj\Debug\netcoreapp2.1\APIDemoApp.pdb

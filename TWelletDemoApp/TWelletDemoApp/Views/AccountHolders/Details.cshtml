@@ -1,0 +1,732 @@
+﻿@model TWelletDemoApp.Models.AccountHolder
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AccountHolder</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountHolderRegnNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AccountHolderRegnNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountHolderFullName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AccountHolderFullName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountHolderNameOnCard)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AccountHolderNameOnCard)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountHolderPhoneNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AccountHolderPhoneNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountHolderMobileNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AccountHolderMobileNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountHolderMobileServiceProvider)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AccountHolderMobileServiceProvider)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountHolderEmail)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AccountHolderEmail)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountHolderAddress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AccountHolderAddress)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountHolderDob)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AccountHolderDob)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountHolderPhoto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AccountHolderPhoto)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountHolderPhotoName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AccountHolderPhotoName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountHolderSignature)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AccountHolderSignature)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountHolderSignatureName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AccountHolderSignatureName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountHolderDurationFrom)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AccountHolderDurationFrom)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountHolderDurationTill)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AccountHolderDurationTill)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountHolderCourseFeeAmount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AccountHolderCourseFeeAmount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FkAccountHolderCourseId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FkAccountHolderCourseId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FkAccountHolderBloodGroupTypeId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FkAccountHolderBloodGroupTypeId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FkAccountHolderCreatedBy)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FkAccountHolderCreatedBy)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FkAccountHolderEntityId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FkAccountHolderEntityId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountHolderPin)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AccountHolderPin)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FkAccountHolderHostelId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FkAccountHolderHostelId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountHolderPan)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AccountHolderPan)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountHolderPinIsReset)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AccountHolderPinIsReset)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsKycDone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsKycDone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FkAccountHolderStatusTypeId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FkAccountHolderStatusTypeId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AccountHolderPwdEncrypt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AccountHolderPwdEncrypt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GroupId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GroupId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.WalletTypeId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WalletTypeId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LoginEnable)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LoginEnable)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Mmid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Mmid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RegisteredbyMobile)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RegisteredbyMobile)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CustOf)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CustOf)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdatedBy)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UpdatedBy)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdatedDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UpdatedDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsDistributor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsDistributor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DistributorCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DistributorCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tpin)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tpin)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SecurityQuestion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SecurityQuestion)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SecurityAnswer)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SecurityAnswer)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ActualDob)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ActualDob)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsTpinenabled)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsTpinenabled)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pan)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pan)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Aadhaar)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Aadhaar)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Salt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Salt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LanguageCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LanguageCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsSmallScaleMerchant)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsSmallScaleMerchant)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CitizenServiceCenterId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CitizenServiceCenterId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PlatForm)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PlatForm)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RegistrationTypeId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RegistrationTypeId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SmsSenderid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SmsSenderid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsStatusChecked)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsStatusChecked)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UniCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UniCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DigithonDigitalTeacher)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DigithonDigitalTeacher)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DistrictId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DistrictId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Poiname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Poiname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Poidob)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Poidob)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Poigender)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Poigender)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Poiphone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Poiphone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Poiemail)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Poiemail)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Poaco)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Poaco)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Poadist)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Poadist)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Poahouse)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Poahouse)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Poaloc)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Poaloc)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Poapc)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Poapc)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Poastate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Poastate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Poavtc)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Poavtc)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PoavtcCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PoavtcCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Poastreet)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Poastreet)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Poalm)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Poalm)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Poasubdist)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Poasubdist)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Poapo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Poapo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.WalletUpgradationDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WalletUpgradationDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsUsageCapEnabled)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsUsageCapEnabled)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DailyUsageCapCount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DailyUsageCapCount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DailyUsageCapAmount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DailyUsageCapAmount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TpinEncrypt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TpinEncrypt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OrderId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Poi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Poi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Poa)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Poa)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Poitype)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Poitype)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Poatype)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Poatype)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Poiverified)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Poiverified)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Poaverified)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Poaverified)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BlockChainId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BlockChainId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BankCbsAccountNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BankCbsAccountNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BankCbsCustomerId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BankCbsCustomerId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BankCbsIfsc)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BankCbsIfsc)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BankCbsAccountType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BankCbsAccountType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Uidtoken)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Uidtoken)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TempAadhaar)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TempAadhaar)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Aadhaarhash)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Aadhaarhash)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RiskStatus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RiskStatus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastPasswordSetOn)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastPasswordSetOn)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UpideviceId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UpideviceId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Upivpa)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Upivpa)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ShowOfferDesc)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ShowOfferDesc)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastCreditAmount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastCreditAmount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastCreditOn)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastCreditOn)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastDebitAmount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastDebitAmount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastDebitOn)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastDebitOn)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrAddDoorNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CurrAddDoorNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrAddStreet)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CurrAddStreet)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrAddLocality)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CurrAddLocality)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrAddLandmark)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CurrAddLandmark)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrAddVtc)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CurrAddVtc)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrAddPincode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CurrAddPincode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrAddDistrict)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CurrAddDistrict)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrAddState)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CurrAddState)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrAddCountry)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CurrAddCountry)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrAddIsApproved)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CurrAddIsApproved)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AndroidVersionName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AndroidVersionName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AndroidVersionCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AndroidVersionCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IosversionName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IosversionName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IosversionCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IosversionCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsInAppOtpenable)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsInAppOtpenable)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OccupationType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OccupationType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IncomeType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IncomeType)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.AccountHolderId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

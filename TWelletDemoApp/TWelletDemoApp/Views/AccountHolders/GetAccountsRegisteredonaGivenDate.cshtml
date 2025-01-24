@@ -1,0 +1,226 @@
+﻿@using X.PagedList;
+@model IPagedList<TWelletDemoApp.Models.AccountHolderDT>
+
+@{
+    ViewData["Title"] = "Get Accounts Registered on a Given Date";
+}
+<!-- Include Bootstrap CSS -->
+
+
+<style>
+
+    .small-td {
+        font-size: 0.8rem; /* Adjust font size */
+        padding: 5px; /* Adjust padding */
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: moccasin; /* Change the hover background color to red */
+    }
+</style>
+<div class="row">
+    <div class='col-sm-5'>
+        <form asp-action="GetAccountsRegisteredonaGivenDate" method="get">
+            <div class="form-group">
+                <label for="date" style=" font:bold;font-size:large">Select Date:</label>
+                <input type="date" id="date" name="date" class="form-control mb-2" required />
+                <button type="submit" class="btn btn-lg btn-primary">Search</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <div class="alert alert-danger mt-3">
+        @ViewBag.ErrorMessage
+    </div>
+}
+
+@*<th>POA Type</th>*@
+@*<th>POA</th>*@
+@*<th>POI</th>*@
+@*<th>KYC Status</th>*@
+@*<th>Address</th>*@
+@if (Model != null && Model.Any())
+{
+    <form method="post" asp-action="Approved">
+
+        <table class="table table table-striped table-hover table-sm text-center">
+            <thead class="text-center" style="background-color: #3254a8; color: white;">
+                <tr>
+                    <th scope="col">AccountHolderId</th>
+                    <th scope="col">Mobile No</th>
+                    <th scope="col">POI Type</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">POI Email</th>
+                    <th scope="col">Created Date<div style="font-size:10px">(YYYY-MM-DD)</div></th>
+                    <th scope="col">Decision</th>
+                    <th scope="col">Remark</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td >@item.AccountHolderId</td>
+                    <td >@item.AccountHolderMobileno</td>
+                    <td >@item.POIType</td>
+                    <td style="font-weight:bold" >@item.AccountHolderFullName</td>
+                    <td >@item.Poiemail</td>
+                    <td >@item.CreatedDate?.ToString("yyyy-MM-dd")</td>
+
+                    <!-- Decision (Approve/Reject) -->
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="approve-@item.AccountHolderId" name="decision[@item.AccountHolderId]" value="Approve" required onchange="toggleRemark('@item.AccountHolderId')">
+                                <label class="form-check-label" for="approve-@item.AccountHolderId">Approve</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="reject-@item.AccountHolderId" name="decision[@item.AccountHolderId]" value="Reject" required onchange="toggleRemark('@item.AccountHolderId')">
+                                <label class="form-check-label" for="reject-@item.AccountHolderId">Reject</label>
+                            </div>
+                        </div>
+                        @Html.ValidationMessage("decision", "", new { @class = "text-danger" })
+                    </td>
+
+                    <!-- Remark Input (Only required when Reject is selected) -->
+                    <td>
+                        <div class="d-flex">
+                            <input type="text" class="form-control w-100" id="remark-@item.AccountHolderId" name="remark[@item.AccountHolderId]" placeholder="Please enter reason for rejection" required disabled
+                                   onkeydown="return preventSpace(event);" />
+                        </div>
+                        @Html.ValidationMessage("remark", "", new { @class = "text-danger" })
+                    </td>
+
+                    <script>
+                        function toggleRemark(accountHolderId) {
+                            const remarkInput = document.getElementById(`remark-${accountHolderId}`);
+                            const approveRadio = document.getElementById(`approve-${accountHolderId}`);
+                            const rejectRadio = document.getElementById(`reject-${accountHolderId}`);
+
+                            if (approveRadio.checked) {
+                                remarkInput.disabled = true;
+                                remarkInput.value = "Approved"; // Clear input when Approve is selected
+                            } else if (rejectRadio.checked) {
+                                remarkInput.disabled = false;
+                                remarkInput.placeholder = "Please enter reason for rejection"; // Enable input with specific placeholder when Reject is selected
+                            }
+                        }
+
+                        function preventSpace(event) {
+                            // Prevent space key from being entered
+                            if (event.key === ' ') {
+                                event.preventDefault();
+                            }
+                        }
+                    </script>
+
+
+
+                </tr>
+
+                }
+            </tbody>
+        </table>
+        <div class="row">
+            <div class="col-10">
+
+            </div>
+            <div class="col-2">
+                <button type="submit" class="btn btn-primary btn-block mt-3 mb-3">Update</button>
+            </div>
+        </div>
+
+    </form>
+}
+else
+{
+    <p>No account holders found for the selected date.</p>
+}
+
+<ul class="pagination">
+    @for (var i = 1; i <= Model.PageCount; i++)
+    {
+        <li class="page-item @(i == Model.PageNumber ? "active" : "")">
+            <a class="page-link" href="@Url.Action("GetAccountsRegisteredonaGivenDate", new { page = i, pageSize = Model.PageSize })">@i</a>
+        </li>
+    }
+</ul>
+@*<script>
+    function preventSpace(event) {
+        if (event.keyCode === 32) {
+            return false;  // Prevent space key
+        }
+        return true;  // Allow other keys
+    }
+
+    function toggleRemark(accountHolderId) {
+        const rejectRadio = document.getElementById('reject-' + accountHolderId);
+        const remarkInput = document.getElementById('remark-' + accountHolderId);
+
+        if (rejectRadio.checked) {
+            remarkInput.disabled = false;
+            remarkInput.focus();
+        } else {
+            remarkInput.disabled = true;
+            remarkInput.value = ''; // Clear the input if disabled
+        }
+    }
+</script>*@
+
+@*<ul class="pagination">
+            <!-- Previous Page Link -->
+            @if (Model.HasPreviousPage)
+            {
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("GetAccountsRegisteredonaGivenDate", new { page = Model.PageNumber - 1, pageSize = Model.PageSize })">Previous</a>
+                </li>
+            }
+            else
+            {
+                <li class="page-item disabled">
+                    <span class="page-link">Previous</span>
+                </li>
+            }
+
+            <!-- Page Number Links -->
+            @for (var i = 1; i <= Model.PageCount; i++)
+            {
+                <li class="page-item @(i == Model.PageNumber ? "active" : "")">
+                    <a class="page-link" href="@Url.Action("GetAccountsRegisteredonaGivenDate", new { page = i, pageSize = Model.PageSize })">@i</a>
+                </li>
+            }
+
+            <!-- Next Page Link -->
+            @if (Model.HasNextPage)
+            {
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("GetAccountsRegisteredonaGivenDate", new { page = Model.PageNumber + 1, pageSize = Model.PageSize })">Next</a>
+                </li>
+            }
+            else
+            {
+                <li class="page-item disabled">
+                    <span class="page-link">Next</span>
+                </li>
+            }
+        </ul>
+
+    <ul class="pagination">
+        <li class="page-item @(Model.HasPreviousPage ? "" : "disabled")">
+            <a class="page-link" href="@Url.Action("GetAccountsRegisteredonaGivenDate", new { page = Model.PageNumber - 1, pageSize = Model.PageSize })">Previous</a>
+        </li>
+
+        @for (var i = 1; i <= Model.PageCount; i++)
+        {
+            <li class="page-item @(i == Model.PageNumber ? "active" : "")">
+                <a class="page-link" href="@Url.Action("GetAccountsRegisteredonaGivenDate", new { page = i, pageSize = Model.PageSize })">@i</a>
+            </li>
+        }
+
+        <li class="page-item @(Model.HasNextPage ? "" : "disabled")">
+            <a class="page-link" href="@Url.Action("GetAccountsRegisteredonaGivenDate", new { page = Model.PageNumber + 1, pageSize = Model.PageSize })">Next</a>
+        </li>
+    </ul>*@

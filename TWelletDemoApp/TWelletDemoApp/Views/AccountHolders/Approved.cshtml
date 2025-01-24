@@ -1,0 +1,141 @@
+﻿@model TWelletDemoApp.Models.AccountHolder
+
+<h4>AccountHolder</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Approved">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <input asp-for="AccountHolderRegnNo" type="hidden" />
+            <input asp-for="AccountHolderId" type="hidden" />
+            <!-- Hide all other fields -->
+            <input asp-for="AccountHolderFullName" type="hidden" />
+            <input asp-for="AccountHolderNameOnCard" type="hidden" />
+            <input asp-for="AccountHolderPhoneNo" type="hidden" />
+            <input asp-for="AccountHolderMobileNo" type="hidden" />
+            <input asp-for="AccountHolderMobileServiceProvider" type="hidden" />
+            <input asp-for="AccountHolderEmail" type="hidden" />
+            <input asp-for="AccountHolderAddress" type="hidden" />
+            <input asp-for="AccountHolderDob" type="hidden" />
+            <input asp-for="AccountHolderPhoto" type="hidden" />
+            <input asp-for="AccountHolderPhotoName" type="hidden" />
+            <input asp-for="AccountHolderSignature" type="hidden" />
+            <input asp-for="AccountHolderSignatureName" type="hidden" />
+            <input asp-for="AccountHolderDurationFrom" type="hidden" />
+            <input asp-for="AccountHolderDurationTill" type="hidden" />
+            <input asp-for="FkAccountHolderCourseId" type="hidden" />
+            <input asp-for="FkAccountHolderBloodGroupTypeId" type="hidden" />
+            <input asp-for="FkAccountHolderCreatedBy" type="hidden" />
+            <input asp-for="FkAccountHolderEntityId" type="hidden" />
+            <input asp-for="AccountHolderPin" type="hidden" />
+            <input asp-for="FkAccountHolderHostelId" type="hidden" />
+            <input asp-for="AccountHolderPan" type="hidden" />
+            <input asp-for="AccountHolderPinIsReset" type="hidden" />
+            <input asp-for="FkAccountHolderStatusTypeId" type="hidden" />
+            <input asp-for="AccountHolderPwdEncrypt" type="hidden" />
+            <input asp-for="GroupId" type="hidden" />
+            <input asp-for="Mmid" type="hidden" />
+            <input asp-for="RegisteredbyMobile" type="hidden" />
+            <input asp-for="CustOf" type="hidden" />
+            <input asp-for="UpdatedBy" type="hidden" />
+            <input asp-for="UpdatedDate" type="hidden" />
+            <input asp-for="DistributorCode" type="hidden" />
+            <input asp-for="Tpin" type="hidden" />
+            <input asp-for="SecurityQuestion" type="hidden" />
+            <input asp-for="SecurityAnswer" type="hidden" />
+            <input asp-for="ActualDob" type="hidden" />
+            <input asp-for="IsTpinenabled" type="hidden" />
+            <input asp-for="Pan" type="hidden" />
+            <input asp-for="Aadhaar" type="hidden" />
+            <input asp-for="Salt" type="hidden" />
+            <input asp-for="LanguageCode" type="hidden" />
+            <input asp-for="IsSmallScaleMerchant" type="hidden" />
+            <input asp-for="CitizenServiceCenterId" type="hidden" />
+            <input asp-for="PlatForm" type="hidden" />
+            <input asp-for="RegistrationTypeId" type="hidden" />
+
+
+            <!-- Hidden fields for parameters you want to hide -->
+            <input asp-for="SmsSenderid" type="hidden" />
+            <input asp-for="IsStatusChecked" type="hidden" />
+            <input asp-for="UniCode" type="hidden" />
+            <input asp-for="DigithonDigitalTeacher" type="hidden" />
+            <input asp-for="DistrictId" type="hidden" />
+            <input asp-for="Poiname" type="hidden" />
+            <input asp-for="Poidob" type="hidden" />
+            <input asp-for="Poigender" type="hidden" />
+            <input asp-for="Poiphone" type="hidden" />
+            <input asp-for="Poiemail" type="hidden" />
+            <input asp-for="Poaco" type="hidden" />
+            <input asp-for="Poadist" type="hidden" />
+            <input asp-for="Poahouse" type="hidden" />
+            <input asp-for="Poaloc" type="hidden" />
+            <input asp-for="Poapc" type="hidden" />
+            <input asp-for="Poastate" type="hidden" />
+            <input asp-for="Poavtc" type="hidden" />
+            <input asp-for="PoavtcCode" type="hidden" />
+            <input asp-for="Poastreet" type="hidden" />
+            <input asp-for="Poalm" type="hidden" />
+            <input asp-for="Poasubdist" type="hidden" />
+            <input asp-for="Poapo" type="hidden" />
+            <input asp-for="WalletUpgradationDate" type="hidden" />
+            <input asp-for="DailyUsageCapCount" type="hidden" />
+            <input asp-for="DailyUsageCapAmount" type="hidden" />
+            <input asp-for="TpinEncrypt" type="hidden" />
+            <input asp-for="OrderId" type="hidden" />
+            <input asp-for="Poi" type="hidden" />
+            <input asp-for="Poa" type="hidden" />
+            <input asp-for="Poitype" type="hidden" />
+            <input asp-for="Poatype" type="hidden" />
+            <input asp-for="Poiverified" type="hidden" />
+            <input asp-for="Poaverified" type="hidden" />
+            <input asp-for="BlockChainId" type="hidden" />
+            <input asp-for="BankCbsAccountNumber" type="hidden" />
+            <input asp-for="BankCbsCustomerId" type="hidden" />
+            <input asp-for="BankCbsIfsc" type="hidden" />
+            <input asp-for="BankCbsAccountType" type="hidden" />
+            <input asp-for="Uidtoken" type="hidden" />
+            <input asp-for="TempAadhaar" type="hidden" />
+            <input asp-for="Aadhaarhash" type="hidden" />
+            <input asp-for="LastPasswordSetOn" type="hidden" />
+            <input asp-for="UpideviceId" type="hidden" />
+            <input asp-for="Upivpa" type="hidden" />
+            <input asp-for="LastCreditAmount" type="hidden" />
+            <input asp-for="LastCreditOn" type="hidden" />
+            <input asp-for="LastDebitAmount" type="hidden" />
+            <input asp-for="LastDebitOn" type="hidden" />
+            <input asp-for="CurrAddDoorNo" type="hidden" />
+            <input asp-for="CurrAddStreet" type="hidden" />
+            <input asp-for="CurrAddLocality" type="hidden" />
+            <input asp-for="CurrAddLandmark" type="hidden" />
+            <input asp-for="CurrAddVtc" type="hidden" />
+            <input asp-for="CurrAddPincode" type="hidden" />
+            <input asp-for="CurrAddDistrict" type="hidden" />
+            <input asp-for="CurrAddState" type="hidden" />
+            <input asp-for="CurrAddCountry" type="hidden" />
+            <input asp-for="AndroidVersionName" type="hidden" />
+            <input asp-for="AndroidVersionCode" type="hidden" />
+            <input asp-for="IosversionName" type="hidden" />
+            <input asp-for="IosversionCode" type="hidden" />
+            <input asp-for="IsInAppOtpenable" type="hidden" />
+            <input asp-for="OccupationType" type="hidden" />
+            <input asp-for="IncomeType" type="hidden" />
+
+            @*<div class="form-group">
+                <label asp-for="Remarks" class="control-label"></label>
+                <input asp-for="Remarks" class="form-control" />
+                <span asp-validation-for="Remarks" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

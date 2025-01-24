@@ -1,0 +1,10 @@
+D:\Yadagiri\Core\ADO .net demoApp\ADO .net demoApp\bin\Debug\ADO.net_demoApp.exe.config
+D:\Yadagiri\Core\ADO .net demoApp\ADO .net demoApp\bin\Debug\ADO.net_demoApp.exe
+D:\Yadagiri\Core\ADO .net demoApp\ADO .net demoApp\bin\Debug\ADO.net_demoApp.pdb
+D:\Yadagiri\Core\ADO .net demoApp\ADO .net demoApp\obj\Debug\ADO .net demoApp.csprojAssemblyReference.cache
+D:\Yadagiri\Core\ADO .net demoApp\ADO .net demoApp\obj\Debug\ADO.net_demoApp.Form1.resources
+D:\Yadagiri\Core\ADO .net demoApp\ADO .net demoApp\obj\Debug\ADO.net_demoApp.Properties.Resources.resources
+D:\Yadagiri\Core\ADO .net demoApp\ADO .net demoApp\obj\Debug\ADO .net demoApp.csproj.GenerateResource.cache
+D:\Yadagiri\Core\ADO .net demoApp\ADO .net demoApp\obj\Debug\ADO .net demoApp.csproj.CoreCompileInputs.cache
+D:\Yadagiri\Core\ADO .net demoApp\ADO .net demoApp\obj\Debug\ADO.net_demoApp.exe
+D:\Yadagiri\Core\ADO .net demoApp\ADO .net demoApp\obj\Debug\ADO.net_demoApp.pdb

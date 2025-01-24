@@ -1,0 +1,213 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+
+@{
+    ViewData["Title"] = "Home Page";
+    var userName = HttpContextAccessor?.HttpContext?.Request.Cookies["UserName"];
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - C_URDDemoApp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <environment include="Development">
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+    <script>
+        // Pass the userName value from the server to JavaScript
+        var userName = '@(userName ?? "")';
+
+        // Check if userName is empty and redirect to the login page if it is
+        if (!userName) {
+            alert("Session expired. Redirecting to login page.");
+            window.location.href = "/LoginProfiles/Login";
+        }
+    </script>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a asp-area="" asp-controller="Users" asp-action="Index" class="navbar-brand">
+                    <img src="~/images/ta_logo.png" alt="TAlogo" style="height: 50px;" />
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a asp-area="" asp-controller="Users" asp-action="Index">Home</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="navbar-text" style="color:white">
+                        <img src="~/images/profile.png" alt="Profile Image" style="height:30px; width:30px; border-radius:50%;" />
+                        <b>Welcome, <b>@userName</b></b> <!-- Displaying the username -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <partial name="_CookieConsentPartial" />
+
+    <div class="container-fluid">
+        @RenderBody()
+        <hr />
+        <footer>
+            <div class="footer-content">
+                <p>&copy; Transaction Analysts India Private</p>
+                <p>Contact us: <a href="mailto:support@transactionanalysts.com">support@transactionanalysts.com</a></p>
+                <p>Phone: (India):(L) +91-80-26784479</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/transactionanalysts/?locale=sq_AL&_rdr" target="_blank" class="fa fa-facebook"></a>
+                    <a href="https://in.linkedin.com/company/transaction-analysts-pvt-ltd" target="_blank" class="fa fa-twitter"></a>
+                    <a href="https://www.zoominfo.com/p/Srinivasa-Katuri/1486086985" target="_blank" class="fa fa-instagram"></a>
+                    <a href="https://in.linkedin.com/company/transaction-analysts-pvt-ltd" target="_blank" class="fa fa-linkedin"></a>
+                </div>
+                <div class="quick-links">
+                    <p>Quick Links:</p>
+                    <ul>
+                        <li><a href="/Home/About">About Us</a></li>
+                        <li><a href="/Home/Contact">Contact</a></li>
+                        <li><a href="/Home/Privacy">Privacy Policy</a></li>
+                        <li><a href="/Home/Terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <style>
+        .profile-image {
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            border: 5px solid #007bff; /* Adding a white border */
+        }
+
+        /* Ensure the navbar has enough space */
+        .navbar {
+            min-height: 50px; /* Adjust based on logo height */
+        }
+
+        /* Style the logo */
+        .logo {
+            height: 50px; /* Adjust based on your logo */
+            width: auto; /* Maintain aspect ratio */
+            padding: 5px 0; /* Adjust padding if needed */
+        }
+
+        /* Adjust navbar and logo alignment */
+        .navbar-brand {
+            padding: 0; /* Remove default padding */
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+            .footer-content p {
+                margin: 5px 0;
+            }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+            .social-icons a {
+                color: #333;
+                text-decoration: none;
+                margin: 0 10px;
+                font-size: 24px;
+                transition: color 0.3s ease;
+            }
+
+                .social-icons a:hover {
+                    color: #007bff;
+                }
+
+        .quick-links {
+            margin-top: 15px;
+        }
+
+            .quick-links p {
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+
+            .quick-links ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+            .quick-links li {
+                display: inline;
+                margin: 0 10px;
+            }
+
+            .quick-links a {
+                text-decoration: none;
+                color: white;
+            }
+
+                .quick-links a:hover {
+                    text-decoration: underline;
+                }
+
+        /* Add this to site.css */
+        .navbar-inverse {
+            background-color: forestgreen;
+            border-color: green;
+        }
+
+            .navbar-inverse .navbar-brand,
+            .navbar-inverse .navbar-nav > li > a {
+                color: white; /* Change text color to ensure it is readable on green background */
+            }
+    </style>
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
